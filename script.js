@@ -132,6 +132,11 @@ let wrapper = document.querySelectorAll(".wrapper")
 let audtg = document.querySelector("#audtg")
 
 wrapper.forEach((e,i) => {
+	audtg.addEventListener('ended', function(){
+	  audtg.setAttribute("src",`https://server8.mp3quran.net/afs/${i}.mp3`)
+	  audtg.load();
+    	 })
+	
     i=i+1;
 
 	if (i<10) {
@@ -145,12 +150,8 @@ wrapper.forEach((e,i) => {
 		audtg.setAttribute("src",`https://server8.mp3quran.net/afs/${i}.mp3`)
 		audtg.play()
 	})
-	audtg.addEventListener('ended', function(){
-	  audtg.setAttribute("src",`https://server8.mp3quran.net/afs/${i++}.mp3`)
-	  audtg.load();
-    	 });
-	
 });
+
 
 
 let stopBtn = document.getElementById("stop")
