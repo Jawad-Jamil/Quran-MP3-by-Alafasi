@@ -145,6 +145,11 @@ wrapper.forEach((e,i) => {
 		audtg.setAttribute("src",`https://server8.mp3quran.net/afs/${i}.mp3`)
 		audtg.play()
 	})
+	audtg.addEventListener('ended', function(){
+	  audtg.setAttribute("src",`https://server8.mp3quran.net/afs/${i++}.mp3`)
+	  audtg.load();
+    	 });
+	
 });
 
 
