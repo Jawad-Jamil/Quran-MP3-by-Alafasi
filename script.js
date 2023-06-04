@@ -161,11 +161,12 @@ startBtn.addEventListener("click",()=>{
 	if(audtg.src==""){
 		audtg.setAttribute("src",`https://server8.mp3quran.net/afs/001.mp3`)
 	}
-	
-	audtg.addEventListener('ended', function(){
+	audtg.play()
+})
+
+audtg.addEventListener('ended', function(){
+	  audtg.pause()
 	  audtg.setAttribute("src",`https://server8.mp3quran.net/afs/002.mp3`)
 	  audtg.load();
-    	 })
-
-	audtg.play()
+	  audtg.play()
 })
