@@ -166,10 +166,10 @@ startBtn.addEventListener("click",()=>{
 
 
 if(audtg.currentTime==audtg.duration){
-	  var k = 1;
+	for (let i = 1; i < surahs.length; i++) {
 	  audtg.pause();
-	  audtg.setAttribute("src",`https://server8.mp3quran.net/afs/00{k}.mp3`)
+	  audtg.setAttribute("src",`https://server8.mp3quran.net/afs/00{i}.mp3`)
 	  audtg.load();
 	  audtg.play();
-	  k=k+1;
+	}
 })
