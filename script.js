@@ -164,9 +164,11 @@ startBtn.addEventListener("click",()=>{
 	audtg.play()
 })
 
+let k = 1;
 if(audtg.currentTime==audtg.duration){
 	  audtg.pause()
-	  audtg.setAttribute("src",`https://server8.mp3quran.net/afs/002.mp3`)
+	  audtg.setAttribute("src",`https://server8.mp3quran.net/afs/00{k}.mp3`)
 	  audtg.load();
 	  audtg.play()
+	  k++;
 })
