@@ -164,8 +164,9 @@ startBtn.addEventListener("click",()=>{
 	audtg.play()
 })
 
-var k = 1;
+
 if(audtg.currentTime==audtg.duration){
+	  var k = 1;
 	  audtg.pause()
 	  audtg.setAttribute("src",`https://server8.mp3quran.net/afs/00{k}.mp3`)
 	  audtg.load();
